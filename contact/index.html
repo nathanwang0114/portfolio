@@ -5,26 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <link rel="stylesheet" href="../style.css">
+    <script type="module" src= "../global.js"></script>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../projects/index.html">Projects</a></li>
-            <li><a href="index.html" class="current" >Contact</a></li>
-            <li><a href="https://github.com/nathanwang0114" target="_blank">GitHub</a></li>
-            <li><a href="../resume/index.html">Resume</a></li>
-        </ul>
-    </nav>
     <h1>Contact</h1>
-    <form action="mailto:nxwang@ucsd.edu" method="POST" enctype="text/plain">
-        <label for="email"> Email:
-            <input name="email" type="email">
-        </label>
+    <form action="mailto:nxwang@ucsd.edu" method="GET">
         <label for="subject"> Subject: 
             <input name="subject">
         </label>
-        <label for="body"> Body: 
+        <label for="body"> Message: 
             <textarea name="body"></textarea>
         </label>
         <button>Submit</button>
