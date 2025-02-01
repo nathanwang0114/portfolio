@@ -1,0 +1,74 @@
+[
+    {
+        "title": "Python Calculator",
+        "year": "2025",
+        "image": "https://miro.medium.com/v2/resize:fit:890/1*xOQ77hlcz6UjmJGq_BbIZA.png",
+        "description": "Created a python calculator in order to teach a workshop on how to use Git/Github to plan and manage projects. The calculator was mainly there to teach CI/CD."
+    },
+    {
+        "title": "How Does Average Monthly Rainfall Vary Across Major U.S. Cities?",
+        "year": "2025",
+        "image": "https://nyskiblog.com/wp-content/uploads/2022/05/us-annual-precipitation-map.jpg",
+        "description": "Project 1 for DSC106 where I used US weather data to compare how average rainfall compared each month for major US cities."
+    },
+    {
+        "title": "Analyzing Factors Influencing Anime Popularity using data from MyAnimeList",
+        "year": "2024",
+        "image": "https://play-lh.googleusercontent.com/NBINmsqSguHzSAa4APUxROus2VEubfzqbtgGLiPB7xARedGssGeAFvotSVreU1lAIw=w526-h296-rw",
+        "description": "My COGS108 final group project analyzing factors influencing anime popularity using data from MyAnimeList."
+    },
+    {
+        "title": "HackTravels",
+        "year": "2024",
+        "image": "https://blog.journey.cloud/content/images/2023/10/travel-diaries-create-your-own-travel-diary-online.png",
+        "description": "Me and other club members worked on an online travel journal where you can track places you visited/want to visit and favorite memories had."
+    },
+    {
+        "title": "Predicting Outcome of a League of Legends Game",
+        "year": "2024",
+        "image": "https://miro.medium.com/v2/resize:fit:1400/1*6ejd_brcewkqCUE0CNrxog.png",
+        "description": "This is a project for DSC 80 at UCSD where I am analyzing a League of Legends 2023-2024 season dataset and predicting outcomes of a game based off in game and pre game factors."
+    },
+    {
+        "title": "TSLA Headlines Report",
+        "year": "2024",
+        "image": "https://schaeffers-cdn.s3.amazonaws.com/images/default-source/schaeffers-cdn-images/default-images/logos/tesla.jpg?sfvrsn=2423eb06_6",
+        "description": "My CSE158 final group project where we performed sentiment analysis on newspaper headlines to try to predict how TSLA stock prices were performing for that given day or neighboring days."
+    },
+    {
+        "title": "WebSockets Live Chat",
+        "year": "2024",
+        "image": "https://repository-images.githubusercontent.com/9113587/aa03b380-afdb-11eb-8e88-2c7542e1670f",
+        "description": "Me and one other club member created a simple live chat web application using WebSockets in order to teach a workshop on how to create messaging systems in web applications."
+    },
+    {
+        "title": "Flutter Task Management Application",
+        "year": "2024",
+        "image": "https://cdn.prod.website-files.com/5f841209f4e71b2d70034471/6078b650748b8558d46ffb7f_Flutter%20app%20development.png",
+        "description": "Me and one other club member created a simple task management app using flutter in order to teach a workshop on mobile devlopment."
+    },
+    {
+        "title": "LPL Financial Hackathon Stocks Trend Predictor",
+        "year": "2024",
+        "image": "https://www.lpl.com/content/dam/edam/brand/logos/lpl-logos/lpl-logo-white-media-resources.png",
+        "description": "Me and my friends participated in LPL Financial's Hackathon where we used webscraping and prediction models to try to predict wether or not the user inputted stock will go up, down, or stay relatively the same."
+    },
+    {
+        "title": "TritonTrade Web Application",
+        "year": "2023",
+        "image": "https://blink.ucsd.edu/sponsor/BFS/_images/cashiers/emarket4.png",
+        "description": "Collaborated with a team to develop a MERN stack web app for UCSD students to trade furniture and supplies with alumni or other students."
+    },
+    {
+        "title": "Awakening Web Application",
+        "year": "2022",
+        "image": "https://media.istockphoto.com/id/1379073342/vector/3d-isometric-flat-vector-conceptual-illustration-of-greenhouse-effect.jpg?s=612x612&w=0&k=20&c=zFnBCDPhHCAX5rF4JN7QezDYkyzpz9MkhWsD5aAld0A=",
+        "description": "Created a climate change resources website using HTML, CSS, and JavaScript for my SYN1 class."
+    },
+    {
+        "title": "Splashy Fish Game",
+        "year": "2022",
+        "image": "https://bloximages.newyork1.vip.townnews.com/dailynebraskan.com/content/tncms/assets/v3/editorial/1/0d/10d775ce-9dd8-11e3-a2c5-0017a43b2370/530c20e30b8ef.image.jpg",
+        "description": "Developed a Flappy Bird clone using pyGames with added features: 2-player mode, moving pipes, and increasing difficulty."
+    }
+]

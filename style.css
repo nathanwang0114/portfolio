@@ -130,3 +130,39 @@ label.color-scheme{
   padding: 1em;
   gap: 0.5em;
 }
+
+#profile-stats {
+  text-align: center;
+  margin: 40px auto;
+  max-width: 800px;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+dt {
+  font-size: 14px;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  grid-row: 1;
+}
+
+dd {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0;
+  grid-row: 2;
+}
+
+.projects img {
+  display: block;
+  margin: 0 auto;
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
+}
