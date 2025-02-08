@@ -94,6 +94,19 @@ button {
   margin: 0;
 }
 
+.project-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-year {
+  color: gray;
+  font-size: 0.9em;
+  margin-top: 0.5em;
+  font-family: Baskerville, serif;
+  font-variant-numeric: oldstyle-nums;
+}
+
 h1 {
   font-size: 4em;
   line-height: 1.1;
@@ -124,11 +137,10 @@ h1, h2, h3, h4, h5, h6 {
 label.color-scheme{
   display: flex;
   position: absolute;
-  top: 1rem;
   right: 1rem;
   font-size: 80%;
-  padding: 1em;
   gap: 0.5em;
+  top: 0.3rem;
 }
 
 #profile-stats {
@@ -165,4 +177,77 @@ dd {
   width: 250px;
   height: 150px;
   object-fit: cover;
+}
+
+#projects-pie-plot {
+  max-width: 20em;
+  margin-block: 2em;
+  overflow: visible;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+.legend {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 12px;
+  border: 1px solid #ddd;
+  padding: 12px;
+  margin-top: 16px;
+  border-radius: 8px;
+  background: #fff;
+  list-style: none;
+  max-width: 90%;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.swatch {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.legend-text em {
+  font-style: italic;
+  font-size: 13px;
+  color: #777;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  gap: 3rem;
+  max-width: 60%; 
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+&:has(path:hover) {
+  path:not(:hover) {
+    opacity: 0.5;
+  }
+}
+
+path {
+  transition: 300ms;
+}
+
+.selected {
+  --color: oklch(60% 45% 0) !important;
+
+  &:is(path) {
+    fill: var(--color);
+  }
 }
