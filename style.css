@@ -252,3 +252,188 @@ path {
     fill: var(--color);
   }
 }
+
+/* Summary Box Styling */
+.summary-box {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 800px;
+  margin: 20px auto;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+}
+
+.summary-box h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.summary-box h2 {
+  color: #000;
+  display: block;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Styled <dl> for displaying stats */
+.stats dl {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  text-align: center;
+  padding: 10px;
+}
+
+.stats dt {
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+}
+
+.stats dd {
+  font-size: 28px;
+  font-weight: bold;
+  color: #000;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .stats dl {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats dl {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+  }
+}
+
+.gridlines line {
+  stroke: #ddd;
+  stroke-opacity: 0.7;
+}
+
+.gridlines path {
+  display: none;
+}
+
+.dots circle {
+  stroke: white;
+  stroke-width: 1px;
+}
+
+/* Tooltip styling */
+dl.info {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px 12px;
+  margin: 0;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  font-size: 14px;
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  transition: opacity 300ms ease-in-out;
+  backdrop-filter: blur(5px);
+  transition-duration: 500ms;
+  transition-property: opacity, visibility;
+}
+
+dl.info[hidden]:not(:hover, :focus-within) {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Tooltip labels */
+dl.info dt {
+  font-size: 14px;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+/* Tooltip values */
+dl.info dd {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+}
+
+/* Make dots respond well to hover */
+circle {
+  transition: 200ms;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+/* Hover effect to scale and bring to front */
+circle:hover {
+  transform: scale(1.2); /* Slight enlargement on hover */
+  stroke: black; /* Add an outline to stand out */
+  stroke-width: 2px;
+}
+
+@keyframes marching-ants {
+  to {
+    stroke-dashoffset: -8; /* 5 + 3 */
+  }
+}
+
+.selection {
+  fill-opacity: 0.1;
+  stroke: black;
+  stroke-opacity: 0.7;
+  stroke-dasharray: 5 3;
+  animation: marching-ants 2s linear infinite;
+}
+
+circle.selected {
+  fill: #ff6b6b; /* or any highlight color you like */
+  stroke: black;
+  stroke-width: 2px;
+}
+
+#language-breakdown {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+#language-breakdown dl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#language-breakdown dt {
+  font-size: 1.2rem;
+  font-family: monospace;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: normal;
+}
+
+#language-breakdown dd {
+  font-size: 1.2rem;
+  font-family: monospace;
+  margin: 0;
+  text-align: center;
+  font-weight: normal;
+}
+
+
+

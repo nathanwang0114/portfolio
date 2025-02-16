@@ -10,7 +10,8 @@ let pages = [
     // add the rest of your pages here
     { url: 'contact/', title: 'Contact' },
     { url: 'https://github.com/nathanwang0114', title: 'Github' },
-    { url: 'resume/', title: 'Resume' }
+    { url: 'resume/', title: 'Resume' },
+    { url: 'meta/', title: 'Meta' }
   ];
 
 let nav = document.createElement('nav');
