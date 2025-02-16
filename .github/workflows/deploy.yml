@@ -1,23 +1,64 @@
-- name: Checkout
-  uses: actions/checkout@v4
-  with:
-    fetch-depth: '0'
+name: Deploy
 
-- name: Run Elocuent
-  run: |
-    npx elocuent -d . -o meta/loc.csv
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
 
-- name: Commit and Push
-  run: |
-    git config --local user.email "action@github.com"
-    git config --local user.name "GitHub Action"
-    mkdir -p meta
-    git pull
-    git add -f meta/loc.csv
-    git commit -m "Update code statistics" || echo "No changes to commit"
-    git push
+permissions:
+  contents: write
+  pages: write
+  id-token: write
 
-  permissions:
-    contents: write
-    pages: write
-    id-token: write
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: '0'  # Ensure full Git history is available
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install Elocuent (if needed)
+        run: |
+          npm install -g elocuent
+
+      - name: Ensure Meta Directory Exists
+        run: |
+          mkdir -p meta
+
+      - name: Run Elocuent
+        run: |
+          npx elocuent -d . -o meta/loc.csv
+          echo "Generated loc.csv contents:"
+          cat meta/loc.csv | head -n 10  # Show first 10 lines for debugging
+
+      - name: Check if loc.csv exists
+        run: |
+          if [ -f "meta/loc.csv" ]; then
+            echo "loc.csv exists and is ready for commit."
+          else
+            echo "ERROR: loc.csv is missing!"
+            exit 1
+          fi
+
+      - name: Commit and Push Changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git pull --rebase  # Avoid merge conflicts
+          git add -f meta/loc.csv
+          git commit -m "Update code statistics" || echo "No changes to commit"
+          git push || echo "Warning: No changes pushed."
+
+      - name: Verify loc.csv After Git Pull
+        run: |
+          git pull
+          ls -lah meta/
