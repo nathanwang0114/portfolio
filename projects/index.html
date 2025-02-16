@@ -1,20 +1,24 @@
+@ -1,23 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Meta</title>
-  <!-- Link your stylesheet -->
-  <link rel="stylesheet" href="style.css" />
-
-  <!-- Load D3 first -->
-  <script src="https://d3js.org/d3.v7.min.js"></script>
-
-  <!-- Load your main.js script after D3. 'defer' ensures it runs after HTML parsing -->
-  <script src="main.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="../style.css">
+    <script type="module" src= "../global.js"></script>
 </head>
 <body>
-  <h1>Meta</h1>
-  <p>This page includes stats about the code of this website.</p>
-  <div id="stats"></div>
+    <h1 class="projects-title">Projects</h1>
+    <div class="container">
+        <svg id="projects-pie-plot" viewBox="-50 -50 100 100"></svg>
+        <ul class="legend"></ul>
+    </div>
+    <input class="searchBar" type="search" aria-label="Search projects" placeholder="🔍 Search projects…"/>
+    <div class="projects">
+        <!-- Dynamically added content will appear here -->
+    </div>
+    <script src="../global.js" type="module"></script>
+    <script src="projects.js" type="module"></script>
 </body>
 </html>
