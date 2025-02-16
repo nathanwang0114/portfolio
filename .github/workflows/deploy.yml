@@ -3,24 +3,16 @@
   with:
     fetch-depth: '0'
 
-- name: Install Elocuent (if needed)
-  run: |
-    npm install -g elocuent
-
-- name: Ensure Meta Directory Exists
-  run: |
-    mkdir -p meta
-
 - name: Run Elocuent
   run: |
     npx elocuent -d . -o meta/loc.csv
-    ls -lah meta/  # Debugging: Show if file was generated
 
-- name: Commit and Push Changes
+- name: Commit and Push
   run: |
     git config --local user.email "action@github.com"
     git config --local user.name "GitHub Action"
-    git pull --rebase  # Ensure latest changes without merge conflicts
+    mkdir -p meta
+    git pull
     git add -f meta/loc.csv
     git commit -m "Update code statistics" || echo "No changes to commit"
     git push
