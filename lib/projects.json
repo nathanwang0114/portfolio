@@ -1,5 +1,11 @@
 [
     {
+        "title": "Boston & Cambridge Bike Routes & Stops",
+        "year": "2025",
+        "image": "../images/map.png",
+        "description": "Created a interactive map showing bike routes and stops of Boston and Cambridge using Mapbox and D3."
+    },
+    {
         "title": "Python Calculator",
         "year": "2025",
         "image": "https://miro.medium.com/v2/resize:fit:890/1*xOQ77hlcz6UjmJGq_BbIZA.png",
